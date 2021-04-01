@@ -15,6 +15,6 @@ app.get("/", (req, res) =>
   res.send(`Node and express server running on PORT ${PORT}`)
 );
 
-app.listen(PORT, () =>
+app.listen(process.env.PORT || PORT, () =>
   console.log(`your server is running on the port ${PORT}`)
 );
